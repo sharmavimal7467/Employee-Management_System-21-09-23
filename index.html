@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee-Management-System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!--
+     1.user should able to add employee.
+   ->name:'';
+   ->employee id :'';
+   ->Email:'';
+   ->designation:'';
+   ->company:'';
+   ->department:'';
+   user should able to store/fill all above information.
+
+   2. Add employee should be displayed  on the webpages in the form of a table.
+
+   3.Every added employee can be deleted/remove.
+-->
+<div id="root">
+    <form id="form">
+        <input type="text" name="serial_no" placeholder="serial no." required>
+        <input type="text" placeholder="Username" name="username" required>
+        <input type="text" placeholder="Employee Id" name="employee_id" required>
+        <input type="email" placeholder="Email" name="email" required>
+        <input type="text" placeholder="Department" name="department" required>
+        <input type="text" placeholder="Company Name" name="company_name" required>
+        <!-- <input type="text" placeholder="Department" name="department"> -->
+        <select name="designation" required>
+            <option value="none">SELECT YOUR DESIGNATION</option>
+             <!--by default select your designation is selected-->
+            <option value="sde">SDE</option>  
+            <option value="qa">QA</option>
+            <option value="tl">TL</option>
+            <option value="manger">MANAGER</option>
+        </select>
+        <button>Add Employee Data</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Employee Name</th>
+                <th>Employee Id</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Company Name</th>
+                <th>Designation</th>
+                <th>Option</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+</div>
+  
+
+<script src="./script.js"></script>
+</body>
+</html>
